@@ -148,7 +148,7 @@
   gap: 1rem;
   font-family: "Menu-font";
   letter-spacing: 0.1rem;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   line-height: 4.5rem;
   color: var(--heading);
   text-transform: uppercase;
@@ -161,16 +161,17 @@
 }
 
 .about-title h1 span {
-  font-size: 4.2rem;
+  font-size: 3.4rem;
   color: var(--heading);
 }
 
 .about-desc h3 {
   font-family: 'Title-font';
   color: var(--aboutcolor);
-  font-size: 4rem;
-  line-height: 4.2rem;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
   word-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1rem;
