@@ -110,12 +110,16 @@ const Projects = forwardRef(({textColor}, ref) => {
                 </div>
                 <div className="p-btn">
                   <button>
-                    <a href="https://multiplediseaseprediction-2yendaquygiktzxcxtfmhc.streamlit.app/">
+                    <a
+                      href="https://multiplediseaseprediction-2yendaquygiktzxcxtfmhc.streamlit.app/"
+                      target="_blank">
                       View Site
                     </a>
                   </button>
                   <button>
-                    <a href="https://github.com/aniketkumar7/Multiple_Disease_Prediction/tree/main">
+                    <a
+                      href="https://github.com/aniketkumar7/Multiple_Disease_Prediction/tree/main"
+                      target="_blank">
                       View Code
                     </a>
                   </button>
