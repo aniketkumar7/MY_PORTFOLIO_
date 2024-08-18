@@ -121,7 +121,7 @@
 
 .img-head h1 {
   font-family: "Img-font";
-  text-shadow: 0 0.5rem 0.5rem var(--aboutcolor);
+  text-shadow: 0 0.5rem 0.5rem var(--primarycolor);
   color: var(--color);
   user-select: none;
   font-size: 4rem;
@@ -157,19 +157,19 @@
 }
 
 .about-title h1 img{
-  width: 3.5rem;
+  width: 3.4rem;
 }
 
 .about-title h1 span {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   color: var(--heading);
 }
 
 .about-desc h3 {
   font-family: 'Title-font';
   color: var(--aboutcolor);
-  font-size: 4.3rem;
-  line-height: 4.5rem;
+  font-size: 4rem;
+  line-height: 4.2rem;
   word-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
