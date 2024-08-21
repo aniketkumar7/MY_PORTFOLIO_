@@ -69,7 +69,6 @@ const About = forwardRef(({ textColor }, ref) => {
               <span>Namaste</span>
               <img src={hand} alt="" />
             </h1>
-            {/* <img className="absolute img8" src={smiles} alt="" /> */}
           </div>
           <div className="about-desc">
             <h3>

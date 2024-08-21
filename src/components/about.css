@@ -178,7 +178,8 @@
 }
 
 .about-desc h3::selection {
-  background-color: var(--select);
+  color: var(--heading);
+  background-color: var(--p7);
 }
 
 .about-desc h3 span {
@@ -186,9 +187,13 @@
 }
 
 .about-desc h3 span::selection {
-  background-color: var(--select);
+  color: var(--heading);
+  background-color: var(--p7);
 }
 
+
+
+/* Media queries */
 
 @media (max-width: 1250px) {
   .about-title h1 {

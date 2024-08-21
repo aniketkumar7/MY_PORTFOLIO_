@@ -9,16 +9,20 @@ const Menu = ({sectionRefs,textColor}) => {
   const [activeItem, setActiveItem] = useState(null);
   const menuItemsRef = useRef([]);
 
+  // Function to handle item clicks
   const handleItemClick = (index) => {
     setActiveItem(index);
+    // Smoothly scroll to the corresponding section
     sectionRefs[index].current.scrollIntoView({ behavior: "smooth" });
     toggleMenu();
   };
 
+  // Function to toggle the menu open/close state
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Effect to handle menu animations based on menuOpen state
   useEffect(() => {
     if (menuOpen) {
       gsap.to(".fullscreen-menu", {
@@ -64,15 +68,20 @@ const Menu = ({sectionRefs,textColor}) => {
   return (
     <div className="nav">
       <nav className="navbar">
+        {/* Logo */}
         <div className="logo" style={{ color: textColor }}>
-          ANIKET
+          <a href="#">ANIKET</a>
         </div>
+
+        {/* Button to toggle the menu */}
         <button
           className="menu-button"
           style={{ backgroundColor: textColor }}
           onClick={toggleMenu}>
           {menuOpen ? "Close" : "Menu"}
         </button>
+
+        {/* Fullscreen menu that animates in and out */}
         <motion.div
           className="fullscreen-menu menu"
           animate={{ x: menuOpen ? 0 : 100, opacity: menuOpen ? 1 : 0 }}>
@@ -82,6 +91,7 @@ const Menu = ({sectionRefs,textColor}) => {
                 <li
                   key={index}
                   ref={(el) => (menuItemsRef.current[index] = el)}>
+                  {/* Store reference for animation */}
                   <a
                     style={{ color: textColor }}
                     className={activeItem === item ? "active" : ""}
@@ -91,6 +101,7 @@ const Menu = ({sectionRefs,textColor}) => {
                   </a>
                 </li>
               )
+
             )}
           </ul>
         </motion.div>
@@ -105,4 +116,6 @@ Menu.propTypes = {
   sectionRefs: PropTypes.array.isRequired,
   textColor: PropTypes.string.isRequired,
 }
+
+// Export the Menu component
 export default Menu;

@@ -6,16 +6,18 @@ import "./contact.css";
 
 const Contact = forwardRef(({homeRef, textColor}, ref)=> {
 
-    const items = [
-      "Get in touch",
-      "Get in touch",
-      "Get in touch",
-      "Get in touch",
-      "Get in touch",
-    ];
+  // Define items for the Marquee component
+  const items = [
+    "Get in touch",
+    "Get in touch",
+    "Get in touch",
+    "Get in touch",
+    "Get in touch",
+  ];
 
   return (
     <div className="contact" ref={ref} style={{ "--color": textColor }}>
+      {/* Render the Marquee component with items and text color */}
       <Marquee items={items} textColor={textColor} />
 
       <div className="connect">
@@ -28,25 +30,29 @@ const Contact = forwardRef(({homeRef, textColor}, ref)=> {
               </span>
               OR
             </h3>
+
+            {/* Social media links */}
             <div className="social">
               <div className="c-card">
-                <a href="https://github.com/aniketkumar7">GITHUB</a>
+                <a href="https://github.com/aniketkumar7" target="_blank">GITHUB</a>
               </div>
 
               <div className="c-card">
-                <a href="https://www.tublian.com/profile/aniketkumar7">
+                <a href="https://www.tublian.com/profile/aniketkumar7" target="_blank">
                   TUBILIAN
                 </a>
               </div>
 
               <div className="c-card">
-                <a href="https://www.linkedin.com/in/aniketkumar07/">
+                <a href="https://www.linkedin.com/in/aniketkumar07/"
+                target="_blank">
                   LINKEDIN
                 </a>
               </div>
 
               <div className="c-card">
-                <a href="https://medium.com/@aniketkumar639597">MEDIUM</a>
+                <a href="https://medium.com/@aniketkumar639597"
+                target="_blank">MEDIUM</a>
               </div>
             </div>
           </div>
@@ -56,13 +62,16 @@ const Contact = forwardRef(({homeRef, textColor}, ref)=> {
             <a
               href=""
               onClick={(e) => {
-                e.preventDefault(); // Prevent default anchor behavior
-                homeRef.current.scrollIntoView({ behavior: "smooth" }); // Scroll to home section
+                // Prevent default anchor behavior
+                e.preventDefault();
+                // Scroll to home section
+                homeRef.current.scrollIntoView({ behavior: "smooth" });
               }}>
               <img src={arrow} alt="" />
             </a>
             <span>]</span>
           </div>
+
         </div>
       </div>
     </div>
@@ -75,5 +84,8 @@ Contact.propTypes = {
   textColor: PropTypes.string.isRequired,
 };
 
+// Set a display name for the component in React DevTools
 Contact.displayName = "Contact";
+
+// Export the Contact component
 export default Contact

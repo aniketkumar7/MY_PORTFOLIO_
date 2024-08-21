@@ -15,6 +15,7 @@
     --p7: #8C49FE;
 }
 
+/* Projects*/
 .projects {
     min-height: 100vh;
 }
@@ -55,6 +56,9 @@
     border-radius: 2.5rem;
 }
 
+
+/* Project Description*/
+
 .p-desc {
     display: flex;
     align-items: center;
@@ -92,6 +96,7 @@
     font-family: 'Lekton';
 }
 
+/* Tech Icons*/
 .p-tech {
     display: flex;
     align-items: center;
@@ -115,12 +120,16 @@
     height: 100%;
 }
 
+
+
+
+/* Buttons*/
+
 .p-btn {
     padding-left: 1rem;
     display: flex;
     align-items: center;
 }
-
 .p-btn button {
     margin: 1rem;
     position: relative;
@@ -163,6 +172,7 @@
     box-shadow: 1px 1px 1px var(--p7);
 }
 
+/* Media Queries */
 
 @media (max-width: 992px) {
 

@@ -2,6 +2,8 @@ import { PropTypes } from 'prop-types';
 import { forwardRef } from "react";
 import Marquee from "../utils/Marquee"
 import './skills.css'
+
+// Define an array of items for the Marquee component
 const items = [
   'Skills/Tech',
   'Skills/Tech',
@@ -10,11 +12,14 @@ const items = [
   'Skills/Tech',
 ];
 
+// Define the Skills component using forwardRef to allow parent components to pass refs
 const Skills = forwardRef(({textColor}, ref) => {
   return (
     <div ref={ref}>
+      {/* Render the Marquee component with the defined items and text color */}
       <Marquee items={items} textColor={textColor} />
 
+      {/* Render a grid of skill cards */}
       <div className="skills">
         <div className="cards">
           <div className="card">
@@ -106,9 +111,14 @@ const Skills = forwardRef(({textColor}, ref) => {
   );
 });
 
-Skills.displayName = "Skills";
+
 //props validation
 Skills.propTypes = {
   textColor: PropTypes.string.isRequired,
 }
+
+// Set the display name for the component for better debugging
+Skills.displayName = "Skills";
+
+// Export the Skills component
 export default Skills

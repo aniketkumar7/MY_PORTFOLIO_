@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import home from "../assets/home.png";
 import { forwardRef } from "react";
-import homesmile from "../assets/homesmile.png";
-import cartoon from "../assets/cartoon.png";
 import "./home.css";
 
 const Home = forwardRef(({ textColor }, ref) => {
@@ -19,8 +17,6 @@ const Home = forwardRef(({ textColor }, ref) => {
         <span>I</span>
         <span>O</span>
       </div>
-      <img className="img5 absolute" src={homesmile} alt="" />
-      <img className="img7 absolute" src={cartoon} alt="" />
 
       <div className="home-img">
         <img src={home} alt="" />

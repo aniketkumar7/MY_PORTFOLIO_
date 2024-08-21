@@ -5,6 +5,7 @@
 }
 
 .marquee {
+    user-select: none;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
