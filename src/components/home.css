@@ -71,8 +71,9 @@ body {
 .home-text {
   position: absolute;
   top: 2%;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .home-text span {
@@ -84,17 +85,12 @@ body {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.home-text span:nth-child(odd) {
-  transform: translateY(-20px);
-}
-
-.home-text span:nth-child(even) {
-  transform: translateY(15px);
-}
 
 /* Home Image */
 .home-img {
   user-select: none;
+  opacity: 0;
+  transform: translateY(30px);
   bottom: -2%;
   z-index: 1;
   width: 550px;
