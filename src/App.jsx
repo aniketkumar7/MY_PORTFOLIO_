@@ -16,14 +16,22 @@ const App = () => {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const colors = [
-    "#0a7273", // Green
-    "#f7b126c1", // Yellow
-    "#8E44ADcc", // Purple
-    "#4b93ffc0", // Orange
-    "#4dd173c0", // Emerald
-    "#f8623dab", // Alizarin
-  ];
+  // const colors = [
+  //   "#0a7273", // Green
+  //   "#f7b126c1", // Yellow
+  //   "#8E44ADcc", // Purple
+  //   "#4b93ffc0", // Orange
+  //   "#4dd173c0", // Emerald
+  //   "#f8623dab", // Alizarin
+  // ];
+   const colors = [
+     "#0a7273", // Green
+     "#f7b126c1", // Yellow
+     "#8E44ADcc", // Purple
+     "#4b93ffc0", // Orange
+     "#4dd173c0", // Emerald
+     "#f8623dab", // Alizarin
+   ];
 
   const [textColor, setTextColor] = useState("");
 
