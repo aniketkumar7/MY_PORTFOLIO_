@@ -107,48 +107,37 @@
     font-family: 'Menu-font';
     letter-spacing: -2px;
     font-size: 3.8em;
-    font-weight: 800;
-    transition: color 0.5s;
+    transition: color 0.5s, transform 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-items a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background-color: var(--heading);
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: -1;
+}
+
+.menu-items a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.menu-items a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .menu-items a.active {
     color: var(--heading);
 }
 
-.menu-items a:hover {
-    color: #d7d5d5;
-}
-
-.img6 {
-    bottom: 28%;
-    left: 5%;
-    transform: rotate(-20deg);
-    width: 180px;
-    animation: shuffle .6s linear infinite;
-    animation-delay: 2s;
-}
-
-@keyframes shuffle {
-    0% {
-        transform: rotate(-5deg);
-    }
-
-    50% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        transform: rotate(-5deg);
-    }
-}
-
-.menu-img {
-    position: absolute;
-    right: 5%;
-    width: 35%;
-    margin-left: 4rem;
-    filter: brightness(0.6) drop-shadow(0 0 1rem var(--primary-color2));
-}
 
 
 @media (max-width: 1150px) {
@@ -206,10 +195,10 @@
         font-size: 2.1em;
     }
 
-        .menu-button:hover{
-            background: var(--bg);
-            color: var(--primary-color);
-        }
+    .menu-button:hover {
+        background: var(--bg);
+        color: var(--primary-color);
+    }
 
     .menu-button {
         font-size: 1em;
