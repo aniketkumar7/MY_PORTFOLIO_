@@ -8,9 +8,9 @@
   src: url("../font/Panchang-Bold.otf");
 }
 
-:root{
+:root {
   --primary-color3: #2125;
-  --primary-color: #19161C;
+  --primary-color: #1a1a1a;
   --primary-color2: #111315;
   --aboutcolor: #5b5a5a;
   --about-color: #1d1b22;
@@ -37,9 +37,20 @@
   box-sizing: border-box;
 }
 
-body{
-  background: var(--primary-color2);
+body {
   overflow-x: hidden;
+  background: var(--primary-color);
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(154, 153, 153, 0.081) 2px, transparent 2px),
+    linear-gradient(180deg, rgba(154, 153, 153, 0.081) 2px, transparent 2px);
+  background-size: 50px 50px, 100px 100px, 150px 150px, 300px 300px, 300px 300px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
 }
 
 
@@ -88,60 +99,59 @@ body{
   z-index: 1;
   width: 550px;
   position: absolute;
-  filter: brightness(0.7) contrast(1.2) ;
+  filter: brightness(0.8) contrast(1.2);
 }
-
 
 
 /* Media Queries */
 
-@media (max-width: 1250px){
-  .home-text{
+@media (max-width: 1250px) {
+  .home-text {
     top: 2%;
   }
 
-  .home-text span{
+  .home-text span {
     font-size: 24rem;
   }
 
-  .home-img{
+  .home-img {
     width: 45vw;
   }
 }
 
 
-@media (max-width: 1150px){
+@media (max-width: 1150px) {
 
-  .home{
+  .home {
     min-height: 105vh;
   }
 
-  .home-text{
+  .home-text {
     top: 2%;
   }
 
-    .home-text span {
-      font-size: 22rem;
-    }
+  .home-text span {
+    font-size: 22rem;
+  }
 
 }
 
 
 
 @media (max-width: 992px) {
-  .home{
+  .home {
     min-height: 100vh;
   }
 
-  .home-text{
+  .home-text {
     top: 5%;
   }
 
-    .home-text span{
-      font-size: 18rem;
-    }
+  .home-text span {
+    font-size: 18rem;
+  }
 
-  .home-img{
+  .home-img {
     bottom: 0%;
     width: 500px;
   }
@@ -151,11 +161,11 @@ body{
 
 @media (max-width: 768px) {
 
-  .home-text{
+  .home-text {
     top: 18%;
   }
 
-  .home-text span{
+  .home-text span {
     font-size: 14rem;
   }
 
@@ -174,15 +184,15 @@ body{
 
 @media (max-width: 600px) {
 
-  .cursor{
-        display: none;
-    }
+  .cursor {
+    display: none;
+  }
 
-  .home{
+  .home {
     min-height: 95vh;
   }
 
-  .home-text{
+  .home-text {
     top: 20%;
   }
 
@@ -206,18 +216,18 @@ body{
 
 @media (max-width: 500px) {
 
-  .home{
+  .home {
     min-height: 95vh;
   }
 
-  .about-img{
+  .about-img {
     padding: 0.4em;
     width: 75vw;
     height: 42vh;
     margin-bottom: 1rem;
   }
 
-  .home-text{
+  .home-text {
     top: 20%;
   }
 
