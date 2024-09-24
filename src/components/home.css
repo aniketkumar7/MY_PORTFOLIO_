@@ -211,7 +211,9 @@ body {
 }
 
 @media (max-width: 500px) {
-
+  body{
+    background-size: 25px 25px, 50px 50px, 75px 75px, 100px 100px, 150px 150px;
+  }
   .home {
     min-height: 95vh;
   }
